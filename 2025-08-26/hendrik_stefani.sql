@@ -20,7 +20,7 @@ CREATE TABLE relação (
     num_casos_cidade_doença int,
     coddoença int,
     codcidade int,
-    primary key (ano),
     foreign key (coddoença) references doença(coddoença),
     foreign key (codcidade) references cidade(codcidade)
+    primary key (ano, coddoença, codcidade),
 );
